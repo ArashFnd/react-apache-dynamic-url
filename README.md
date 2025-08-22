@@ -59,14 +59,18 @@ With apache installed and enabled on your ubuntu server, run below command:
 ```bash
 sudo a2enmod rewrite
 ```
-In your site’s vhost (e.g., /etc/apache2/sites-available/000-default.conf), make sure the build directory allows overrides:
+In your site’s vhost (e.g., /etc/apache2/sites-available/clinics.kidiar.com.conf), make sure the build directory allows overrides:
 ```bash
 <VirtualHost *:80>
-  DocumentRoot /var/www/your-app/build
-
-  <Directory /var/www/your-app/build>
+  ServerAdmin webmaster@localhost
+  ServerName clinics.kidiar.com
+  ServerAlias www.clinics.kidiar.com
+  DocumentRoot /var/www/clinics.kidiar.com
+  <Directory /var/www/clinics.kidiar.com>
     Options FollowSymLinks
     AllowOverride All
     Require all granted
   </Directory>
+  ErrorLog ${APACHE_LOG_DIR}/error.log
+  CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
