@@ -58,3 +58,14 @@ A step-by-step guide to deploying a **React** single-page app on **Apache2**, wi
 With apache installed and enabled on your ubuntu server, run below command:
 ```bash
 sudo a2enmod rewrite
+In your site’s vhost (e.g., /etc/apache2/sites-available/000-default.conf), make sure the build directory allows overrides:
+```bash
+<VirtualHost *:80>
+  DocumentRoot /var/www/your-app/build
+
+  <Directory /var/www/your-app/build>
+    Options FollowSymLinks
+    AllowOverride All
+    Require all granted
+  </Directory>
+</VirtualHost>
