@@ -44,16 +44,13 @@ A step-by-step guide to deploying a **React** single-page app on **Apache2**, wi
 - A production build of a React SPA
 - Apache2 VirtualHost or subdirectory config
 - **.htaccess** rules for React Router (no 404 on refresh)
-- Optional: caching, Brotli/gzip, and HTTPS
-- Optional: **CI/CD** with GitHub Actions (push → build → deploy)
 
 ---
 
 ## Prerequisites
-- **Node.js** 18+ and **npm** or **pnpm**
+- **Node.js** 18+ and **npm**
 - A Linux server (e.g., Ubuntu) with **Apache2**
-- SSH access (or cPanel/hosting file manager)
-- GitHub repository
+- SSH access
 
 ---
 
