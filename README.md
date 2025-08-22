@@ -55,15 +55,6 @@ A step-by-step guide to deploying a **React** single-page app on **Apache2**, wi
 ---
 
 ## Quick Start
+With apache installed and enabled on your ubuntu server, run below command:
 ```bash
-# clone your repo
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
-
-# install & build (Vite example)
-npm install
-npm run build  # outputs dist/
-
-# copy build to server (root-hosted example)
-# NOTE: use 'build/' if you're using CRA instead of Vite.
-rsync -av --delete dist/ user@server:/var/www/html/
+sudo a2enmod rewrite
