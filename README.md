@@ -94,4 +94,7 @@ RewriteRule ^ - [L]
 # Everything else goes to React
 RewriteRule ^ index.html [L]
 ```
-
+## Troubleshooting
+- **404 on refresh / deep link**  
+  Do not add `.htaccess` file to the built directory of your dynamic URL.
+  For example, if your dynamic URL is: https://clinics.kidisr.com/fa/blogs/[subject], which [subject] is the name of your title as a directory, you should add this `.htaccess file` to: https://clinics.kidisr.com/fa/blogs
