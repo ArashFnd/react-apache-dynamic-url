@@ -33,10 +33,10 @@ A step-by-step guide to deploying a **React** single-page app on **Apache2**, wi
 ---
 
 ## Demo & Repo
-- **Live site:** `https://your-domain.tld/` or `https://your-domain.tld/myapp/`
-- **Repo:** `https://github.com/<your-username>/<repo-name>`
+- **Live site:** `[https://clinics.kidiar.com//](https://clinics.kidiar.com/fa/blog/%D8%AA%D8%B4%DA%A9%DB%8C%D9%84-%D8%AD%D8%A7%D9%81%D8%B8%D9%87-%D9%86%D9%88%D8%B2%D8%A7%D8%AF-%D8%B2%D9%88%D8%AF%D8%AA%D8%B1-%D8%A7%D8%B2-%D8%A2%D9%86-%DA%86%D9%87-%D8%AA%D8%B5%D9%88%D8%B1-%D9%85%DB%8C-%D8%B4%D8%AF-%D8%B4%D8%B1%D9%88%D8%B9-%D9%85%DB%8C-%D8%B4%D9%88%D8%AF)`
+- **Repo:** `https://github.com/ArashFnd/react-apache-dynamic-url`
 
-> Replace placeholders like `<repo-name>` and `your-domain.tld`.
+> The live site is my own website built based on this tutorial.
 
 ---
 
