@@ -74,3 +74,24 @@ In your site’s vhost (e.g., /etc/apache2/sites-available/clinics.kidiar.com.co
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+```
+Reload the apache:
+```bash
+sudo systemctl reload apache2
+```
+Add this `.htaccess` file to your parent directory with respect to your dynamic url:
+```bash
+RewriteEngine On
+
+# IMPORTANT if your app is under a sub-path:
+RewriteBase /fa/blog/
+
+# Serve existing files/directories as-is
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Everything else goes to React
+RewriteRule ^ index.html [L]
+```
+
